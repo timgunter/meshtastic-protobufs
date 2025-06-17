@@ -296,6 +296,44 @@ message ModuleConfig {
   }
 
   /*
+   * Config for the DirectMessageReplyModule
+   */
+  message DirectMessageReplyConfig {
+    /*
+     * Whether the DirectMessageReplyModule is enabled
+     */
+    bool enabled = 1;
+
+    /*
+     * The canned response to send when a direct message is received
+     * This is a string that will be sent as a reply to the sender of the direct message
+     */
+    string cannedResponse = 2;
+
+    /*
+     * The channel to use for the direct message reply
+     * If net set to a secondary channel, the reply will
+     * be sent as a direct message.
+     */
+    uint32 channel = 3;
+
+    /*
+     * If true, add hop info to the reply message.
+     */
+    bool hops = 4;
+
+    /*
+     * If true, signal metrics will be sent with the reply message.
+     */
+    bool signalMetrics = 5;
+
+    /*
+     * If true, echo the message back in the reply.
+     */
+    bool echoMessage = 6;
+  }
+
+  /*
    * Serial Config
    */
   message SerialConfig {
@@ -829,6 +867,11 @@ message ModuleConfig {
      * TODO: REPLACE
      */
     PaxcounterConfig paxcounter = 13;
+
+    /*
+     * TODO: REPLACE
+     */
+    DirectMessageReplyConfig direct_message_reply = 14;
   }
 }
 
