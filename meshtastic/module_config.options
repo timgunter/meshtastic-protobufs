@@ -29,3 +29,5 @@
 *DetectionSensorConfig.detection_trigger_type max_size:8
 
 *StatusMessageConfig.node_status max_size:80
+
+*DirectMessageReplyConfig.cannedResponse max_size:228
