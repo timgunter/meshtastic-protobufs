@@ -409,6 +409,11 @@ message ModuleConfig {
      * If true, echo the message back in the reply.
      */
     bool echoMessage = 6;
+
+    /*
+     * If true, echo the short user name back in the reply.
+     */
+    bool echoUser = 7;
   }
 
   /*
