@@ -30,3 +30,7 @@
 
 *DirectMessageReplyConfig.queries max_size:100
 *DirectMessageReplyConfig.responses max_size:200
+
+*PositionUpdateReplyConfig.start_code_word max_size:16
+*PositionUpdateReplyConfig.next_code_word max_size:16
+*PositionUpdateReplyConfig.next_node max_size:16

@@ -156,6 +156,11 @@ message AdminMessage {
      * TODO: REPLACE
      */
     DIRECTMESSAGEREPLY_CONFIG = 13;
+
+    /*
+     * TODO: REPLACE
+     */
+    POSITIONUPDATEREPLY_CONFIG = 14;
   }
 
   enum BackupLocation {

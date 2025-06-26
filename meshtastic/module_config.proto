@@ -346,6 +346,66 @@ message ModuleConfig {
     string responses = 8;
   }
 
+  message PositionUpdateReplyConfig {
+    /*
+     * Whether the PositionUpdateReplyModule is enabled
+     */
+    bool enabled = 1;
+
+    /*
+     * If true, echo the short user name back in the reply.
+     */
+    bool send_location = 2;
+
+    /*
+     * If true, send the distance from the position update to the receiver.
+     */
+    bool send_distance = 3;
+
+    /*
+      * If true, send the bearing from the position update to the receiver.
+      * This is a true compass bearing in degrees from 0 to 360.
+      */
+    bool send_bearing = 4;
+
+    /*
+     * If true, send the hops from the position update to the receiver.
+     * This is the number of hops the position update has taken to reach the receiver.
+     */
+    bool send_hops = 5;
+
+    /*
+     * If true, send the signal metrics from the position update to the receiver.
+     * This includes SNR, RSSI, and other signal quality metrics.
+     */
+    bool send_signal_metrics = 6;
+
+    /*
+     * If non-zero, use to convert magnetic bearing to true bearing(in degrees)
+     */
+    float declination = 7;
+
+    /*
+     * Code word to use to start position update tracking(default/if empty is "start")
+     */
+    string start_code_word = 8;
+
+    /*
+     * Optionl next codeword in sequence of nodes
+     */
+    string next_code_word = 9;
+
+    /*
+     * Name of next node in sequence
+     */
+    string next_node = 10;
+
+    /*
+     * Distance from node in meters to reveal next node info
+     */
+    float next_node_distance = 11;
+  }
+
   /*
    * Serial Config
    */
@@ -885,6 +945,11 @@ message ModuleConfig {
      * TODO: REPLACE
      */
     DirectMessageReplyConfig direct_message_reply = 14;
+
+    /*
+     * TODO: REPLACE
+     */
+    PositionUpdateReplyConfig position_update_reply = 15;
   }
 }
 
