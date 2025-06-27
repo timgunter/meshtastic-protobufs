@@ -308,7 +308,7 @@ message ModuleConfig {
      * The canned response to send when a direct message is received
      * This is a string that will be sent as a reply to the sender of the direct message
      */
-    string cannedResponse = 2;
+    string canned_response = 2;
 
     /*
      * The channel to use for the direct message reply
@@ -320,22 +320,22 @@ message ModuleConfig {
     /*
      * If true, add hop info to the reply message.
      */
-    bool hops = 4;
+    bool send_hops = 4;
 
     /*
      * If true, signal metrics will be sent with the reply message.
      */
-    bool signalMetrics = 5;
+    bool send_signal_metrics = 5;
 
     /*
      * If true, echo the message back in the reply.
      */
-    bool echoMessage = 6;
+    bool echo_message = 6;
 
     /*
      * If true, echo the short user name back in the reply.
      */
-    bool echoUser = 7;
+    bool echo_user = 7;
   }
 
   /*
