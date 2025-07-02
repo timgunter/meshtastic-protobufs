@@ -28,4 +28,5 @@
 *DetectionSensorConfig.name max_size:20
 *DetectionSensorConfig.detection_trigger_type max_size:8
 
-*DirectMessageReplyConfig.canned_response max_size:200
+*DirectMessageReplyConfig.queries max_size:100
+*DirectMessageReplyConfig.responses max_size:200

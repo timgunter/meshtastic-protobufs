@@ -305,37 +305,45 @@ message ModuleConfig {
     bool enabled = 1;
 
     /*
-     * The canned response to send when a direct message is received
-     * This is a string that will be sent as a reply to the sender of the direct message
-     */
-    string canned_response = 2;
-
-    /*
      * The channel to use for the direct message reply
      * If net set to a secondary channel, the reply will
      * be sent as a direct message.
      */
-    uint32 channel = 3;
+    uint32 channel = 2;
 
     /*
      * If true, add hop info to the reply message.
      */
-    bool send_hops = 4;
+    bool send_hops = 3;
 
     /*
      * If true, signal metrics will be sent with the reply message.
      */
-    bool send_signal_metrics = 5;
+    bool send_signal_metrics = 4;
 
     /*
      * If true, echo the message back in the reply.
      */
-    bool echo_message = 6;
+    bool echo_message = 5;
 
     /*
      * If true, echo the short user name back in the reply.
      */
-    bool echo_user = 7;
+    bool echo_user = 6;
+
+    /*
+     * "|" delimited list of potential received queries
+     */
+    string queries = 7;
+
+    /*
+     * "|" delimited list of responses to queries
+     * The first response listed will be the one given if a received message
+     * doesn't match one of the queries. Make an empty query with a '|'
+     * character if you don't want a particular query to correspond to this
+     * first value.
+     */
+    string responses = 8;
   }
 
   /*
