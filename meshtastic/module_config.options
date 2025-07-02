@@ -30,4 +30,5 @@
 
 *StatusMessageConfig.node_status max_size:80
 
-*DirectMessageReplyConfig.canned_response max_size:200
+*DirectMessageReplyConfig.queries max_size:100
+*DirectMessageReplyConfig.responses max_size:200
