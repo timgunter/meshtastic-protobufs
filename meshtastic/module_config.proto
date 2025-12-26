@@ -482,6 +482,11 @@ message ModuleConfig {
      * Distance from node in meters to reveal next node info
      */
     float next_node_distance = 11;
+
+    /*
+     * Optional list of lat/lon pairs to compare received updates against
+     */
+    string lat_lons  = 12;
   }
 
   /*
