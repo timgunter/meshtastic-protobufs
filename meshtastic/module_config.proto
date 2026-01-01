@@ -487,6 +487,13 @@ message ModuleConfig {
      * Optional list of lat/lon pairs to compare received updates against
      */
     string lat_lons  = 12;
+
+    /*
+     * Degree rotation to apply to bearings and ranges if list of lat/lons
+     * pairs is specified using eastings and northings or bearings and ranges
+     * relative to node's position
+     */
+    float bearing_offset = 13;
   }
 
   /*
